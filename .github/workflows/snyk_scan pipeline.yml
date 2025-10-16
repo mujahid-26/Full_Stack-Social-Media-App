@@ -1,4 +1,4 @@
-name: Full_Stack Social Media
+name: Full_stack Social Media workflow for Node using Snyk
 on: push
 jobs:
   security:
