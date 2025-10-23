@@ -6,7 +6,6 @@ jobs:
     steps:
 
     #-- SNYK SCAN --#
-      - uses: actions/checkout@main
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@main
         continue-on-error: false
@@ -25,7 +24,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
 
     #-- TRUFFLEHOHG SCAN --#
-      - name: scan-push
+      - name: scan-secrets
         uses: trufflesecurity/trufflehog@main
         with:
           base: ""
